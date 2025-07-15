@@ -8,7 +8,11 @@ from rubpy.types import Updates
 from apscheduler.schedulers.asyncio import AsyncIOScheduler
 
 bot = Client("rubpy")
+
+#اینجا گوید گروه رو وارد کنید
 group_guid = "g0F3Kj30ad949d2c2ab97ff036386cff"
+
+#اینجا اسم گروه رو(اسم فارسی نباشه)
 group_name = "test hakhaman"
 
 FONTS = {
