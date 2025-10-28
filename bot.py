@@ -47,16 +47,13 @@ async def update_group_name():
         new_name = f"{fancy_time} | {group_name}"
         await bot.edit_group_info(group_guid, title=new_name)
     except Exception as e:
-        print(f"[❌] خطا در تغییر اسم گروه: {e}")
+        print(f"خطا در تغییر اسم گروه: {e}")
 
 async def main():
     await bot.start()
     scheduler = AsyncIOScheduler(timezone="Asia/Tehran")
     scheduler.add_job(update_group_name, "cron", second="*")
     scheduler.start()
-
-    print("[⏳] ربات در حال اجراست...")
     await asyncio.Event().wait()
-
 if __name__ == "__main__":
     asyncio.run(main())
